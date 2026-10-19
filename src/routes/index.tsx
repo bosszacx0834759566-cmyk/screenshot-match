@@ -65,7 +65,7 @@ function Index() {
         <div className="site-container flex h-20 items-center justify-between gap-6">
           <Button variant="editorial" asChild className="brand-link h-auto gap-3 p-0"><a href="#top" aria-label="GodHeimer home"><Logo className="brand-symbol" /><span className="text-sm font-bold">GODHEIMER<span className="mt-0.5 block text-[8px] font-normal">TECHNOLOGIES</span></span></a></Button>
           <nav aria-label="Main navigation" className="ml-auto hidden items-center gap-9 lg:flex">
-            {nav.filter(([, id]) => ["robertcore", "leadership", "contact"].includes(id)).map(([label, id]) => <Button key={id} variant="editorial" asChild className={`nav-link h-auto p-0 text-[11px] uppercase ${active === id ? "opacity-100" : "opacity-70"}`}><a href={`#${id}`} aria-current={active === id ? "location" : undefined}>{label}{id === "contact" && <ArrowUpRight aria-hidden="true" />}</a></Button>)}
+            {nav.filter(([, id]) => ["robertcore", "leadership", "contact"].includes(id ?? "")).map(([label, id]) => <Button key={id} variant="editorial" asChild className={`nav-link h-auto p-0 text-[11px] uppercase ${active === id ? "opacity-100" : "opacity-70"}`}><a href={`#${id}`} aria-current={active === id ? "location" : undefined}>{label}{id === "contact" && <ArrowUpRight aria-hidden="true" />}</a></Button>)}
           </nav>
           <Dialog.Root open={open} onOpenChange={setOpen}>
             <Dialog.Trigger asChild><Button variant="editorial" className="ml-3 h-11 gap-4 p-0" aria-label="Open menu"><span className="hidden text-[10px] uppercase sm:inline">Menu</span><Menu /></Button></Dialog.Trigger>
