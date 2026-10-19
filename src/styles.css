@@ -170,7 +170,7 @@ body { font-family: var(--font-sans); background: var(--ink); -webkit-font-smoot
 
 /* Motion primitives */
 @utility reveal { opacity: 0; transform: translateY(32px); transition: opacity 1s var(--ease-out), transform 1s var(--ease-out); &.in { opacity: 1; transform: none; } }
-@utility mask-line { display: block; overflow: hidden; & > span { display: block; transform: translateY(105%); transition: transform 1.2s var(--ease-out); } &.in > span { transform: none; } }
+@utility mask-line { display: block; overflow: hidden; padding-bottom: .12em; margin-bottom: -.12em; & > span { display: block; transform: translateY(105%); transition: transform 1.2s var(--ease-out); } &.in > span { transform: none; } }
 @utility mono { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
 
 .site-container { width: 100%; max-width: 1680px; margin-inline: auto; padding-inline: clamp(20px, 4vw, 64px); }
